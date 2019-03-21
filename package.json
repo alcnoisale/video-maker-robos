@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/alcnoisale/video-maker-robos/issues"
   },
-  "homepage": "https://github.com/alcnoisale/video-maker-robos#readme"
+  "homepage": "https://github.com/alcnoisale/video-maker-robos#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.9"
+  }
 }
