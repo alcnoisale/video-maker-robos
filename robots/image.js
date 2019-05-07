@@ -1,4 +1,5 @@
 const imageDownloader = require('image-downloader')//BIBLIOTECA PARA REALIZAR DOWNLOAD DE IMAGENS
+// const gm = require('gm').subClass({imageMagick: true})
 const google = require('googleapis').google //BIBLIOTECA DE IMAGENS DO GOOGLE
 const customSearch = google.customsearch('v1')
 const state = require('./state.js')
@@ -10,6 +11,7 @@ async function robot() {
    
     await fetchImagesOfAllSentences(content)
     await downloadAllImages(content)
+
     state.save(content)
 
     async function fetchImagesOfAllSentences(content) {
@@ -70,7 +72,7 @@ async function robot() {
             url: url,
             dest: `./content/${fileName}`
         })
-    }
+    }   
 
 }
 
